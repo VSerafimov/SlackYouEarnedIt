@@ -11,8 +11,8 @@ namespace SlackYouEarnedIt.Controllers
         [ResponseType(typeof(string))]
         public HttpResponseMessage Post()
         {
-            string data = Request.Content.ReadAsStringAsync().Result;
-
+            //string data = Request.Content.ReadAsStringAsync().Result;
+            string data = "https://clearmeasure.youearnedit.com/slack/authentication";
             HttpResponseMessage httpResponseMessage = new HttpResponseMessage() { Content = new ObjectContent(typeof(string), data, new JsonMediaTypeFormatter()) };
 
             return httpResponseMessage;
